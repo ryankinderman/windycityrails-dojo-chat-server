@@ -10,7 +10,7 @@ class TwitterBot < BotBase
       twstream.on_limit {|skip_count| bot.push("Skipped #{skip_count}") }
       twstream.track('#wcr10', '#testytest') do |status|
         puts("#{status.inspect}")
-        bot.push("#{status[:user][:screen_name]}: #{status[:text]}")
+        bot.push("<a href=\"http://www.twitter.com/#{status[:user][:screen_name]}\">#{status[:user][:screen_name]}</a>: #{status[:text]}")
       end
     end
 
