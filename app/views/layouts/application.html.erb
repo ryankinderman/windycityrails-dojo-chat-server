@@ -11,12 +11,15 @@
 <body>
 
   <div id="application">
-    <div id="logos">
-      <%= image_tag "wcr.png", :class => "wcr"%>
-      <%= image_tag "obtiva.png", :class => "obtiva"%>
-    </div>
     <div id="main-content">
       <%= yield :layout %>
+    </div>
+    
+    <div id="footer">
+      <div id="logos">
+        <%= image_tag "wcr.png", :class => "wcr"%>
+        <%= image_tag "obtiva.png", :class => "obtiva"%>
+      </div>
     </div>
   </div>
 

@@ -13,7 +13,9 @@
     setTimeout(poll, 500);
 
     $('.chat_input_container').wrap('<div class="float-wrapper"/>').wrap('<div class="floated-input-wrapper"/>');
-    $('.chat_window').css({'padding-top':$('.floated-input-wrapper').innerHeight()});
+    $('.chat_window').css({
+      'padding-top':$('.floated-input-wrapper').innerHeight()
+    });
 
     $(window).resize(function(){
       $('.float-wrapper').css({'position':'fixed','left':(256 + 18), 'width': ( $('.chat_container').outerWidth() - 0 ) })
