@@ -32,6 +32,32 @@ div.users ul {
   padding: 0;
 }
 
+div#active_users {
+  position: fixed;
+  float: left;
+  width: 200px;
+  border: 10px solid #77BED2;
+  font-family: Helvetica Neue, Arial, sans-serif;
+  padding: 10px;
+  font-size: 12px;
+}
+
+div#active_users ul, div#active_users ul li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+div#active_users ul li {
+  margin-bottom: 25px;
+  clear: both;
+}
+
+div#active_users img{ 
+  margin-right: 10px;
+  float: left;
+}
+
 div.chat_container {
   margin-left: 256px;
   border: 20px solid #77BED2;

@@ -5,6 +5,8 @@ WindycityrailsDojoChatServer::Application.routes.draw do
   match '/chat/push' => 'chat#push'
   match '/chat/pull/:last_sync' => 'chat#pull'
 
+  get '/users', :to => 'users#active'
+
   #TODO:  Too lame for the Dojo!
   match 'redis/*redis_args' => 'redis#index'
 end

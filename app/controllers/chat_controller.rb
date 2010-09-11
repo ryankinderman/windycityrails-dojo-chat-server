@@ -3,6 +3,7 @@ class ChatController < ApplicationController
   skip_before_filter :verify_authenticity_token, :only => :push
 
   def index
+    track_user # Defined in app controller
     @recent_messages = (RedisClient.redis.zrevrange("room:default", 0, 30) || []).map { |message_json| ActiveSupport::JSON.decode(message_json) }
     @users = ActiveSupport::JSON.decode(RedisClient.redis.get("room:default:active_users").to_s) || []
   end
