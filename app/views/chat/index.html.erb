@@ -31,7 +31,7 @@
           </span>
           <span class="message">
             (<%= message["posted_at"] %>) <b class="username"><%= message["username"]%></b>
-            <%= sanitize message["message"], :tags => 'img' %>
+            <%= sanitize auto_link(message["message"]), :tags => 'img, a' %>
           </span>
         </div>
       <% end %>

@@ -13,11 +13,7 @@ class GoogleBot < BotBase
         message_text.gsub!(/^search /,'')
         puts %Q{Googling "#{message_text}" from #{message_user}}
         url = lucky(message_text)
-        unless url.nil?
-          result = "<a href=\"#{url}\">#{url}</a>"
-        else
-          result = 'No result found'
-        end
+        result = url.nil? ? "No result found" : url
       end
       result
     end

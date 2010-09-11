@@ -11,7 +11,7 @@ class BotBase
     self.username = username
     self.last_updated = 0
     self.options = options
-    self.chat_server = options[:chat_server]
+    self.chat_server = options[:chat_server] || 'localhost:3000'
   end
   
   def run
