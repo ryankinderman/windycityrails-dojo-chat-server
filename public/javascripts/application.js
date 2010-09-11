@@ -1,7 +1,14 @@
 (function($) {
   WCR = {};
   
- $(document).ready(function() {
+  $(document).ready(function() {
+    if (typeof(console) == "undefined") {
+      console = {
+        log: function(message) {
+        }
+      };
+    }
+
     WCR.odd = $('div.chat_window p:first').hasClass("odd");
     $('.chat_input_container input').keyup(function(e) {
        if (e.keyCode == 13) {
