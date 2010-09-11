@@ -33,7 +33,7 @@ div.users ul {
   padding: 0;
 }
 
-div.active_users {
+div#active_users {
   float: left;
   width: 200px;
   border: 10px solid #77BED2;
@@ -42,18 +42,18 @@ div.active_users {
   font-size: 12px;
 }
 
-div.active_users ul, div.active_users ul li {
+div#active_users ul, div#active_users ul li {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-div.active_users ul li {
+div#active_users ul li {
   margin-bottom: 25px;
   clear: both;
 }
 
-div.active_users img{ 
+div#active_users img{ 
   margin-right: 10px;
   float: left;
 }
