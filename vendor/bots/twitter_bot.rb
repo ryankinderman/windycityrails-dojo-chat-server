@@ -5,7 +5,7 @@ class TwitterBot < BotBase
   def run
      bot = self
      bot.push('Starting up!')
-     twstream = TweetStream::Client.new('ipadipadipad', 'georocks!')
+     twstream = TweetStream::Client.new('wcr10bot', 'railsrocks!')
       twstream.on_error {|error| bot.push('Error!' + error)}
       twstream.on_limit {|skip_count| bot.push("Skipped #{skip_count}") }
       twstream.track('#wcr10', '#testytest') do |status|
@@ -17,5 +17,5 @@ class TwitterBot < BotBase
 end
 
 if __FILE__ == $0
-  TwitterBot.run!("twitterbot")
+  TwitterBot.run!("twitterbot",:chat_server => "dojo-chat.local")
 end
